@@ -28,23 +28,30 @@ public class salary extends Employee{
 
 
     public void setMonthlySalary(int grade) {
-        if (grade == 1) {
-            monthlySalary = 3000000;
-            if (isForeigner) {
-                monthlySalary *= 1.5;
-            }
-        } else if (grade == 2) {
-            monthlySalary = 5000000;
-            if (isForeigner) {
-                monthlySalary *= 1.5;
-            }
-        } else if (grade == 3) {
-            monthlySalary = 7000000;
-            if (isForeigner) {
-                monthlySalary *= 1.5;
-            }
+        switch(grade) {
+            case 1:
+                monthlySalary = 3000000;
+                if (isForeigner) {
+                    monthlySalary *= 1.5;
+                }
+                break;
+            case 2:
+                monthlySalary = 5000000;
+                if (isForeigner) {
+                    monthlySalary *= 1.5;
+                }
+                break;
+            case 3:
+                monthlySalary = 7000000;
+                if (isForeigner) {
+                    monthlySalary *= 1.5;
+                }
+                break;
+            default:
+                System.out.println("Invalid grade input");
+                break;
         }
-    }
+    };
 
     public void setAnnualDeductible(double deductible) {
         this.annualDeductible = deductible;
