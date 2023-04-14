@@ -3,7 +3,7 @@ package lib;
 import java.time.LocalDate;
 import java.util.List;
 
-public class salary {
+public class salary extends Employee{
     private double monthlySalary;
     private double otherMonthlyIncome;
     private double annualDeductible;
